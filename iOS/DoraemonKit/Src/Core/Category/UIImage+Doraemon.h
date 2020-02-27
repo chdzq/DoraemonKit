@@ -19,7 +19,7 @@ Create and return a 1x1 point size image with the given color.
 
 @param color  The color.
 */
-+ (nullable UIImage *)imageWithColor:(UIColor *)color;
++ (nullable UIImage *)doraemon_imageWithColor:(UIColor *)color;
 
 /**
  Create and return a pure color image with the given color and size.
@@ -27,6 +27,6 @@ Create and return a 1x1 point size image with the given color.
  @param color  The color.
  @param size   New image's type.
  */
-+ (nullable UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
++ (nullable UIImage *)doraemon_imageWithColor:(UIColor *)color size:(CGSize)size;
 
 @end
