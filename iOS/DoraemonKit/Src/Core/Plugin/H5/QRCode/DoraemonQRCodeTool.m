@@ -429,7 +429,7 @@
 
 #pragma mark  二维码颜色填充
 
-void ProviderReleaseData (void *info, const void *data, size_t size){
+void DoraemonProviderReleaseData (void *info, const void *data, size_t size){
     free((void*)data);
 }
 
@@ -470,7 +470,7 @@ void ProviderReleaseData (void *info, const void *data, size_t size){
         }
     }
     // 输出图片
-    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, ProviderReleaseData);
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, DoraemonProviderReleaseData);
     CGImageRef imageRef = CGImageCreate(imageWidth, imageHeight, 8, 32, bytesPerRow, colorSpace,
                                         kCGImageAlphaLast | kCGBitmapByteOrder32Little, dataProvider,
                                         NULL, true, kCGRenderingIntentDefault);
